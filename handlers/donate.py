@@ -49,6 +49,7 @@ async def process_donate(callback_query: CallbackQuery, state: FSMContext):
     await edit_or_send_message(
         target_message=callback_query.message,
         text=text,
+        media_path=os.path.join("img", "donate.jpg"),
         reply_markup=builder.as_markup(),
     )
 
